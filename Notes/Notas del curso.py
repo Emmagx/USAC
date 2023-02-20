@@ -154,3 +154,13 @@ for h in diccionario:
     print(f"Nombre: {h}, Edad: {diccionario[h]}", end=" ") #end="" es una manera de quitar el espacio que se crean entre prints y poder imprimir todo en una sola linea
 #con el primer {h} solo llamo la clave en la que esta posicionado la variable, con {diccionario[h]} llamo a la definicion de dicha clave con el valor 
 #actual de h
+#CONJUNTOS #En conjuntos se usan las llaves
+conjunto1={1,2,3,4} #Estructura de un conjunto
+conjunto2={2,3,5,6}
+conjunto3={4,3,6,7}
+print(conjunto1==conjunto2) #in bolean value, evalua que sean completamente iguales
+print(conjunto1|conjunto2) #Union de dos o mas conjutos A union B, une solo una vez cada valor, si tiene repetidos, no los coloca.
+print(conjunto1&conjunto2) #interseccion entre conjuntos A interseccion B, evalua que valores tienen en común.
+print(conjunto1-conjunto2) #Todo conjunto que tenga conjunto1 pero no conjunto2
+print(conjunto2-conjunto1) #Todo conjunto que tenga conjunto2 pero no conjunto1
+print(conjunto1^conjunto2) #Diferencia simetrica entre conjuntos, todos lo valores que no sean interseccion.
