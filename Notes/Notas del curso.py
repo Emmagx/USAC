@@ -164,3 +164,4 @@ print(conjunto1&conjunto2) #interseccion entre conjuntos A interseccion B, evalu
 print(conjunto1-conjunto2) #Todo conjunto que tenga conjunto1 pero no conjunto2
 print(conjunto2-conjunto1) #Todo conjunto que tenga conjunto2 pero no conjunto1
 print(conjunto1^conjunto2) #Diferencia simetrica entre conjuntos, todos lo valores que no sean interseccion.
+
