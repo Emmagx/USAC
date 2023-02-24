@@ -1,0 +1,41 @@
+como puedo hacer un rubber ducky desde ubuntu
+
+El Rubber Ducky es un dispositivo de hardware que se utiliza para automatizar tareas en un equipo. Para crear uno desde Ubuntu, puedes seguir los siguientes pasos:
+
+    Consigue un dispositivo USB y formatealo en el sistema de archivos FAT32.
+
+    Descarga el firmware de Rubber Ducky desde la página oficial de Hak5.
+
+    Descomprime el archivo descargado y copia el firmware a la raíz del dispositivo USB.
+
+    Crea un script en el lenguaje de scripting que desees que se ejecute en el ordenador de destino. Este script debe estar en el formato del Rubber Ducky, que se compone de comandos que se ejecutan en secuencia.
+
+    Abre un editor de texto en Ubuntu, como Gedit, y escribe el script para el Rubber Ducky. Asegúrate de guardar el archivo en la carpeta "payloads" en el dispositivo USB.
+
+    Ejecta el dispositivo USB y conectalo a un ordenador de destino. Una vez conectado, el Rubber Ducky emulará la entrada de teclado y ejecutará el script automáticamente.
+
+Cabe destacar que, la creación y uso de Rubber Ducky debe ser ético y legal. El uso indebido de esta herramienta puede ser ilegal y perjudicar a terceros.
+6B-50-García, Brayan Emanuel
+que puedo hacer con un rubber ducky?
+
+Un Rubber Ducky es un dispositivo USB programable que puede simular la entrada de teclado en un ordenador. Al conectarlo a un equipo, el Rubber Ducky puede ejecutar comandos de forma automática, lo que lo hace una herramienta muy versátil y útil para automatizar tareas o simplificar procesos.
+
+A continuación, te muestro algunos ejemplos de lo que puedes hacer con un Rubber Ducky:
+
+    Automatizar tareas repetitivas en un ordenador.
+
+    Realizar ataques de phishing o ingeniería social.
+
+    Realizar auditorías de seguridad para detectar vulnerabilidades en sistemas.
+
+    Obtener información del sistema, como contraseñas y datos de inicio de sesión.
+
+Es importante tener en cuenta que el uso indebido del Rubber Ducky es ilegal y puede ser considerado una actividad maliciosa. Por lo tanto, asegúrate de utilizarlo únicamente para propósitos éticos y legales, y siempre con el consentimiento de la persona cuyo ordenador se está utilizando.
+6B-50-García, Brayan Emanuel
+Como puedo realizar la opcion 3 con un rubber ducky>
+
+La opción 3, que se refiere a la realización de auditorías de seguridad, es un proceso más complejo que requiere conocimientos avanzados de hacking y seguridad informática.
+
+Para realizar una auditoría de seguridad con un Rubber Ducky, se necesitan varios pasos, que incluyen la recopilación de información, la identificación de vulnerabilidades y la explotación de las mismas. Esto puede implicar el uso de diversas herramientas y técnicas, como la explotación de vulnerabilidades conocidas, la ingeniería inversa de software y la realización de pruebas de penetración.
+
+Dicho esto, el uso del Rubber Ducky para fines de auditoría de seguridad debe ser realizado únicamente por profesionales calificados y con experiencia en el campo de la seguridad informática. Además, siempre se debe llevar a cabo con el consentimiento previo y explícito del propietario del sistema o red que se está evaluando. Utilizar el Rubber Ducky sin el permiso del propietario podría ser considerado un delito grave de hacking y violación de la privacidad.
