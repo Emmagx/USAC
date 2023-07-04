@@ -17,7 +17,7 @@ while True: #Mientras se verdadero
             print(f"Su nuevo saldo es: {saldo:.2f}")
             time.sleep(2) #delay dado, en segundos
         else:
-            print(f"La cantidad{cantidad:.2f} es menor a 0. Realice nuevamente la operacion.")            
+            print(f"La cantidad {cantidad:.2f} es menor a 0. Realice nuevamente la operacion.")            
             time.sleep(2)
     elif peticion==2:
         cantidad=float(input("Ingrese la cantidad a Retirar: "))
@@ -31,7 +31,7 @@ while True: #Mientras se verdadero
                 print("su saldo es insuficiente")
                 time.sleep(2)
         else: 
-            print("La cantidad a retirar debe ser un número positivo")
+            print("La cantidad a retirar debe ser mayor a cero(0)")
             time.sleep(2)
     elif peticion==3:
         print(f"Su saldo es: {saldo:.2f}")
@@ -42,7 +42,7 @@ while True: #Mientras se verdadero
         if confirmacion=="s":
             print("Gracias por usar nuestro ATM")
             time.sleep(2)
-            break #ROMPE el bucle si llega a esa opcion.
+            break #Rompe el bucle si llega a esa opcion.
     else:
         print("Opcion incorrecta")   
         time.sleep(2)
