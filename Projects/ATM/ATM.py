@@ -21,7 +21,7 @@ while True: #Mientras se verdadero
             time.sleep(2)
     elif peticion==2:
         cantidad=float(input("Ingrese la cantidad a Retirar: "))
-        if cantidad>1:
+        if cantidad<=0:
             if cantidad<=saldo:
                 saldo-=cantidad
                 print(f"Usted Retiró {cantidad:.2f}")
