@@ -97,5 +97,19 @@ afirmacion1 = num1 < num2;
 afirmacion2 = num1 != num2;
 document.write(afirmacion1 && afirmacion2);
 
-//camel case
+//camel case. Es como nombramos las variables. se empieza con la primera palabra en minuscula y la segunda en mayuscula.
+camelCase = "Esta es la manera correcta";
+camelCaseCaseCase = "Esta es otra manera, una nueva palabra una mayuscula"
+document.getElementById();//Otro ejemplo, asi trabaja js
 
+//Condicionales
+let condicion = true;
+if (condicion === true){
+    alert("Hola");
+}
+else if (condicion === 1 && condicion === 2) {
+    alert("adios");
+ }
+ else {
+    alert("Esto es la estructura de un if en js");
+ }
