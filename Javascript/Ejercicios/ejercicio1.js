@@ -1,6 +1,6 @@
 // //EJERCICIOS DE LA HISTORIA DE COFLA(DALTO)
 // //Problema A
-// /*
+// 
 // A) 3 chicos de 23 años perfectamente normales entran a una heladeria a comprar un helado pero hay un problema: los precios no
 // estan al lado de cada estante con su respectivo helado.
 // Ellos quieren comprar el helado mas caro que puedan con la plata que tienen, así que... veamos como podemos ayudarlos
@@ -19,7 +19,7 @@
 // - Pedirles que ingresen el monto que tienen y mostrarles los helados que pueden comprar
 // - Si hay 2 o mas con el mismo precio, mostrar ámbos.
 // - Cofla quiere saber cuanto es el vuelto
-// */
+// 
 let moneda, dineroTotal, monto1, monto2, monto3, vuelto = 0;
 moneda = "usd";
 monto1String = prompt(`cuanto dinero tiene Roberto?`);
