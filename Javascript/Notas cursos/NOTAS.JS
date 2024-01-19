@@ -113,3 +113,5 @@ else if (condicion === 1 && condicion === 2) {
  else {
     alert("Esto es la estructura de un if en js");
  }
+
+//ARRAYS
