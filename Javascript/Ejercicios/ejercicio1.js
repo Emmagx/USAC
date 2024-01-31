@@ -46,14 +46,13 @@ const helados =[{producto:"Pote de 1/4 KG", precio:2.9},
 
 //document.write(`${helado2.producto} ${helado2.precio} ${moneda}`);
 document.write(`Lista de Helados que puedes comprar con ${dineroTotal.toFixed(2)} ${moneda}`);
-function heladoMostrar(a){
+const heladoMostrar = a => {
     if (a.precio <= dineroTotal) {
-        var vuelto = dineroTotal - a.precio;
+        var vuelto =dineroTotal-a.precio;
         document.write(`<br> ${a.producto} precio: ${a.precio} </br> `);
-        document.write(`Su vuelto seria: ${vuelto.toFixed(2)} ${moneda} `); 
-        }
-}
+        document.write(`Su vuelto seria: ${vuelto.toFixed(2)} ${moneda} `); }
+} 
 for (let i = 0; i <= helados.length; i++){
     heladoMostrar(helados[i]);
-    }
+    };
 //Ejercicio Resuelto.

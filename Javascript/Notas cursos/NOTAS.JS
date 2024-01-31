@@ -115,3 +115,15 @@ else if (condicion === 1 && condicion === 2) {
  }
 
 //ARRAYS
+arr = [5,6,"hola",false];//un array solo es un grupo de valores, een js pueden ser de cualquier tipo
+console.log(arr[0,1,2,3]);
+
+arr2 = [{primerCampo: "", segundoCampo: 1},
+        {primerCampo: "", segundoCampo: 1},
+        {primerCampo: "", segundoCampo: 1},
+
+];//array de objetos. Podemos mandar a pedir el objeto de la siguiente manera:
+console.log(arr2.primerCampo[1]);
+//imprimimos el objeto con el nombre primercampo en el segundo objeto
+
+
