@@ -7,6 +7,7 @@ public class App {
         double num1 = 0;
         double num2 = 0;
         boolean condicion = true;
+        static Scanner scanner = new Scanner(System.in);
         while(condicion == true){
             System.out.println("--------------------------------");
             System.out.println("Que operacion desea realizar?\n");
@@ -17,7 +18,7 @@ public class App {
             System.out.println("5. Tablas de multiplicar\n");
             System.out.println("6. Salir\n");
             System.out.println("--------------------------------");
-            Scanner scanner = new Scanner(System.in);
+            
                 System.out.println("Coloque el numero de opcion(1, 2, 3, 4, 5, 6 ): ");
                 int opcion = scanner.nextInt();
                 if (opcion>0 && opcion<5){
@@ -87,5 +88,7 @@ public class App {
 
             }
         }
+        scanner.close();
     }
+    
 }
