@@ -1,6 +1,8 @@
 package snakes_ladders;
 import java.util.Scanner;
 public class Juego {
+    static int posicion = 1;
+    static String player = "@";
     static Menu menu = new Menu();
     static randomDice dice = new randomDice();
     static int dado;
@@ -10,7 +12,7 @@ public class Juego {
         System.out.println("Bienvenido al juego de serpientes y Escaleras");
         while (action == 0){
             Tablero tablero = new Tablero();
-            tablero.tablerito();
+            tablero.tablerito(player, posicion);
             System.out.println("Acciones Realizables: ");
             System.out.println("1. lanzar dado");
             System.out.println("2. Terminar Juego");
@@ -22,9 +24,8 @@ public class Juego {
             switch (asciiValue){
                 //Lanzar dado
                 case 49 -> {
-                    
                     dado=dice.ranDice();
-                    System.out.println("Caso dado" + dado);
+                    posicion += dado;
                     action = 0;
                 }
                 //Salir del Juego
@@ -36,7 +37,7 @@ public class Juego {
                 }
                 //Pausar juego
                 case 80 -> { 
-                    System.out.println("Caso Pausa");
+                    menu.menuInGame();
                     action = 0;
                     
                 }

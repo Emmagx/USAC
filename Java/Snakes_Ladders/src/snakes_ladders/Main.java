@@ -30,10 +30,7 @@ public class Main{
            case 1 -> {
               juego.JuegoPrincipal();
            }
-               
-           case 2 -> {
-           
-           }
+
            case 3 -> {
            System.out.println("saliendo del programa");
            System.exit(0);
