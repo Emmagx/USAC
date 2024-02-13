@@ -18,7 +18,9 @@ package snakes_ladders;
 public class Main{
     static int opcion;
     static Juego juego = new Juego();
-    static Menu menu = new Menu();    
+    static Tablero tablero = new Tablero();
+    static Menu menu = new Menu();
+    static int position;
     public static void main(String[] args) {
        
        //Guardamos el return de nuestro metodo que esta dentro del archivo Menu.java en la variable opcion.
@@ -28,6 +30,7 @@ public class Main{
        switch(opcion){
            //Iniciamos el juego:
            case 1 -> {
+              position = 1;
               juego.JuegoPrincipal();
            }
 

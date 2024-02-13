@@ -7,6 +7,7 @@ public class Juego {
     static randomDice dice = new randomDice();
     static int dado;
     static int action = 0;
+    static int game;
     static Scanner scanner = new Scanner(System.in);
     public static void JuegoPrincipal(){
         System.out.println("Bienvenido al juego de serpientes y Escaleras");
@@ -46,7 +47,12 @@ public class Juego {
                     action = 0;
                 }
                 }
+            
             }
             
         }
+    public void reiniciarJuego() {
+    this.posicion = 1;
+}
+    
     }

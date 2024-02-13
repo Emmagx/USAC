@@ -1,14 +1,14 @@
 package snakes_ladders;
 public class ProblemaCosenos {
-    static int resultadosCosenos;
+    int resultadosCosenos;
     //Formula c**2=a**2 + a*b * cos(C)
     //Datos por triangulo:
     //Triangulo 1:
-    static double ladoA, respuesta;
-    static double rightAnswer[];
-    static double ladoC;
-    static double ladoB;
-    static double alpha, beta, gama;
+    double ladoA;
+    double [] rightAnswer;
+    double ladoC;
+    double ladoB;
+    double alpha, beta, gama;
         public double [] case1Coseno(){
             ladoA = 15; 
             ladoC = 20; 

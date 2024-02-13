@@ -1,15 +1,20 @@
 package snakes_ladders;
+import java.util.Scanner;
 
 public class Tablero {
+    static Scanner scanner = new Scanner(System.in);
     String[][] tablero = new String[8][8];
-    bolean  NewGame = False;
+    static int  NewGame;
+    static int position;
+    static int contador;
+    static Juego juego = new Juego();
+//    static int position;
+    Main Main = new Main();
  public void tablerito(String player, int position) {
-        while (NewGame = true){
-     
- }
-        int contador = 1; // Inicializamos el contador en 1
+            contador = 1; // Inicializamos el contador en 1
         // Recorremos las filas del tablero de abajo hacia arriba
         for (int i = tablero.length - 1; i >= 0; i--) {
+
             // Alternamos el sentido de conteo de los números en las filas pares e impares
             if (i % 2 == tablero.length % 2) { // Filas pares
                 // Recorremos las columnas del tablero de derecha a izquierda
@@ -24,7 +29,7 @@ public class Tablero {
                 
             } else { // Filas impares
                 // Recorremos las columnas del tablero de izquierda a derecha
-                for (int j = tablero[i].length - 1; j >= 0; j--) {
+                for (int j = tablero[i].length - 1; j >= 0; j--) {                   
                     // Asignamos el número actual al tablero y aumentamos el contador
                     tablero[i][j] = " [ " + contador  + " ] " ; 
                     if (contador==position && position < 65){
@@ -33,10 +38,22 @@ public class Tablero {
                     contador++;
                 }
             }
-            if (position >= 64){
+            while (position >= 64){
                 System.out.println("Felicidades haz terminado el juego");
-                System.out.println("Quieres jugar una vez mas? 1. Si 2. Terminar programa");
-                NewGame = false;
+                System.out.println("Opciones 1. Volver al Inicio 2. Terminar programa");
+                int juego1 = scanner.nextInt();
+                position = 1;
+                if (juego1 == 1){
+                    juego.reiniciarJuego();
+                        
+                    position = 1; 
+                    Main.main(null);
+                    
+                }
+                if (juego1 == 2){
+                    System.out.println("Gracias por jugar");
+                    System.exit(0);
+                }
             }
         }
         // Imprimimos el tablero
@@ -46,7 +63,5 @@ public class Tablero {
             }
             System.out.println(); // Imprimimos una nueva línea al final de cada fila
         }
-    }
+ }
 }
-
-    

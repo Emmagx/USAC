@@ -52,6 +52,7 @@ public class Menu {
         switch (opcion) {
             case 1 -> {
                 System.out.println("Se iniciara nuevo juego");
+                juego.reiniciarJuego();
                 juego.JuegoPrincipal();
             }
             case 2 -> {
