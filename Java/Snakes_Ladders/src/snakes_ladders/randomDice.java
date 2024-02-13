@@ -13,7 +13,7 @@ public class randomDice {
             dado = (int) dado1;
             dado = (dado + 2);
         }
-        System.out.println("Numero " + dado);
+        System.out.println("Dado:  " + dado);
             return dado;
     }
     
@@ -23,7 +23,7 @@ public class randomDice {
             double coseno = Math.random() * 2;
             cosenoCase = (int) coseno;
         }
-        System.out.println("Numero " + cosenoCase);
+//        System.out.println("Numero " + cosenoCase);
         return cosenoCase;
 }
         public int ranSumaMatriz(){
@@ -32,7 +32,7 @@ public class randomDice {
             double matriz1 = Math.random() * 2;
             matrizCase = (int) matriz1;
         }
-        System.out.println("Numero " + matrizCase);
+//        System.out.println("Numero " + matrizCase);
         return matrizCase;
 }
         
@@ -42,16 +42,16 @@ public class randomDice {
             double matriz1 = Math.random() * 2;
             matrizCase = (int) matriz1;
         }
-        System.out.println("Numero " + matrizCase);
+//        System.out.println("Numero " + matrizCase);
         return matrizCase;
 }
         public int trampasEz(){
         trampa = 0;
         while (trampa <= 1 || trampa > 23){
-            double trampaPos = Math.random() * 23;
+            double trampaPos = Math.random() * 22;
             trampa = (int) trampaPos;
         }
-        System.out.println("Numero " + trampa);
+//        System.out.println("Numero " + trampa);
         return trampa;}
         
         public int trampasMid(){
@@ -60,7 +60,7 @@ public class randomDice {
             double trampaPos = Math.random() * 47;
             trampa = (int) trampaPos;
         }
-        System.out.println("Numero " + trampa);
+//        System.out.println("Numero " + trampa);
         return trampa;}
                 
         public int trampasHard(){
@@ -69,7 +69,7 @@ public class randomDice {
             double trampaPos = Math.random() * 23;
             trampa = (int) trampaPos;
         }
-        System.out.println("Numero " + trampa);
+//        System.out.println("Numero " + trampa);
         return trampa;}
         
 }
