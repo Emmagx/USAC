@@ -28,7 +28,7 @@ public class randomDice {
 }
         public int ranSumaMatriz(){
         matrizCase = 0;
-        while (matrizCase <= 1 || matrizCase > 2){
+        while (matrizCase < 0 || matrizCase > 2){
             double matriz1 = Math.random() * 2;
             matrizCase = (int) matriz1;
         }

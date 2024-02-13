@@ -7,13 +7,14 @@ public class Trampas {
     ProblemaCosenos cos = new ProblemaCosenos();
     double [][] matrizResultanteDiv;
     double [] cosenoResultante;
+    double [][] matrizResultanteSuma = new double [5][5];
     double [] respuestaCorrecta;
     public double [] trampasEz(){
         System.out.println("Buscar lo siguiente: ");
         int trampa = random.RanCoseno();
         System.out.println("Buscar los datos faltante para completar este triangulo, si sabemos que: " );
         switch (trampa){
-            case 1 -> {
+            case 0 -> {
                 int ladoA = 15; 
                 int ladoC = 20; 
                 int alpha = 25;
@@ -30,7 +31,7 @@ public class Trampas {
                 break;
                 
             }
-            case 2 ->{
+            case 1 ->{
                 int ladoB = 10; 
                 int ladoC = 25; 
                 int beta = 30;
@@ -46,7 +47,7 @@ public class Trampas {
                 cosenoResultante[2] = scanner.nextFloat();
                 break;
             }
-            case 3 -> {
+            case 2 -> {
                 int ladoA = 18; 
                 int ladoB = 25; 
                 int gama = 30;
@@ -69,12 +70,74 @@ public class Trampas {
 
     
     public double [][] trampasMid(){
-        System.out.println("Reesolver las siguiente Suma de Matrices");
-        
-        matrices.imprimirMatrizDivision(matrices.matriz1Div(),matrices.matriz2Div()); 
-        return matrizResultanteDiv;
+        int trampa = random.ranSumaMatriz();
+        System.out.println("Resolver las siguiente Suma de Matrices");
+        switch (trampa){
+            case 0 -> {
+                matrices.imprimirMatrizSuma(matrices.matriz1Suma(), matrices.matriz2Suma());
+                System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
+                for (int i=0; i<matrizResultanteSuma.length; i++){
+                    for (int j = 0; j<matrizResultanteSuma.length; j++){
+                        System.out.println("Colocar el valor de la casilla " + i +  "," + j);
+                        matrizResultanteSuma[i][j] = scanner.nextDouble();
+            }
+    }
+            }
+            case 1 -> {
+                matrices.imprimirMatrizSuma(matrices.matriz3Suma(), matrices.matriz4Suma()); 
+                System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
+                for (int i=0; i<matrizResultanteSuma.length; i++){
+                     for (int j = 0; j<matrizResultanteSuma.length; j++){
+                            System.out.println("Colocar el valor de la casilla " + i +  "," + j);
+                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                }
+    }
+            }
+            case 2 -> {
+                matrices.imprimirMatrizSuma(matrices.matriz5Suma(), matrices.matriz6Suma());
+                System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
+                for (int i=0; i<matrizResultanteSuma.length; i++){
+                     for (int j = 0; j<matrizResultanteSuma.length; j++){
+                            System.out.println("Colocar el valor de la casilla " + i +  "," + j);
+                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                }
+            }    
+        }
+            default ->{
+                System.out.println("Error");
+                    }
+        }
+        return matrizResultanteSuma;
     }
     public double [][] trampasHard(){
-        return null;      
+        System.out.println("Resolver las siguientes divisiones de matrices (REDONDEAR RESULTADO A 3 DECIMLAES Y COLOCAR EL SIGNO)");
+        int trampa = random.ranDivMatriz();
+        switch(trampa){
+            case 0 -> {
+                matrices.imprimirMatrizDivision(matrices.matriz1Div(), matrices.matriz2Div());
+                
+                System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
+                for (int i=0; i<matrizResultanteSuma.length; i++){
+                     for (int j = 0; j<matrizResultanteSuma.length; j++){
+                            System.out.println("Colocar el valor de la casilla " + i +  "," + j);
+                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                }
+        }                
+            }
+            case 1 -> {
+                matrices.imprimirMatrizDivision(matrices.matriz3Div(), matrices.matriz4Div()); 
+                System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
+                for (int i=0; i<matrizResultanteSuma.length; i++){
+                     for (int j = 0; j<matrizResultanteSuma.length; j++){
+                            System.out.println("Colocar el valor de la casilla " + i +  "," + j);
+                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                    }
+            }             
+            }
+            default -> {
+                
+            }
+        }
+        return matrizResultanteDiv;      
     }
 }
