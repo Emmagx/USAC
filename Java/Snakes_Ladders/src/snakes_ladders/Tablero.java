@@ -11,7 +11,7 @@ public class Tablero {
 //    static int position;
     private int [] trampas;
     Main Main = new Main();
- public void tablerito(String player, int position, int [] trampas) {
+ public void tablerito(String player, int position, int [] trampasEz, int [] trampasMid, int [] trampasHard) {
     
     contador = 1; // Inicializamos el contador en 1
     
@@ -30,13 +30,27 @@ public class Tablero {
             
 
             // Verificamos si la posición actual corresponde a una trampa
-            for (int trampa : trampas) {
-                if (contador == trampa) {
+            for (int trampaEz : trampasEz) {
+                if (contador == trampaEz) {
                     // Concatenamos el símbolo "#" a la celda
                     celda += " # ";
                     break; // Salimos del bucle si encontramos una trampa
                 }
             }
+            for (int trampaMid : trampasMid) {
+                if (contador == trampaMid) {
+                    // Concatenamos el símbolo "#" a la celda
+                    celda += " # ";
+                    break; // Salimos del bucle si encontramos una trampa
+                }
+            }
+            for (int trampaHard : trampasHard) {
+                if (contador == trampaHard) {
+                    // Concatenamos el símbolo "#" a la celda
+                    celda += " # ";
+                    break; // Salimos del bucle si encontramos una trampa
+                }
+            }            
              celda += " ] ";
 
             // Asignamos la celda al tablero

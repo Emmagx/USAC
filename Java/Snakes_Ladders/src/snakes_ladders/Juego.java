@@ -16,12 +16,20 @@ public class Juego {
     public static void JuegoPrincipal() {
         System.out.println("Bienvenido al juego de serpientes y Escaleras");
         int [] trampasEz = null;
+        int [] trampasMid = null;
+        int [] trampasHard = null;
         while (action == 0) {
             if (trampasEz == null) { // Si las trampas aún no se han generado
             trampasEz = dice.trampasEz(true); // Genera las trampas
         }
+            if (trampasMid == null) { // Si las trampas aún no se han generado
+            trampasMid = dice.trampasMid(true); // Genera las trampas
+        }
+            if (trampasHard == null) { // Si las trampas aún no se han generado
+            trampasHard = dice.trampasHard(true); // Genera las trampas
+        }
             Tablero tablero = new Tablero();
-            tablero.tablerito(player, posicion, trampasEz, trampasMid, TrampasHard.);
+            tablero.tablerito(player, posicion, trampasEz, trampasMid, trampasHard);
             System.out.println("Acciones Realizables: ");
             System.out.println("1. lanzar dado");
             System.out.println("2. Terminar Juego");
@@ -36,7 +44,9 @@ public class Juego {
                         System.out.println("2. Salir del juego");
                         int opcion = scanner.nextInt();
                         if (opcion == 1){
-                            trampas = dice.trampasEz(true);
+                            trampasEz = dice.trampasEz(true);
+                            trampasHard = dice.trampasEz(true);
+                            trampasMid = dice.trampasMid(true);
                             juego.reiniciarJuego();
                             Main.main(null);
                             
