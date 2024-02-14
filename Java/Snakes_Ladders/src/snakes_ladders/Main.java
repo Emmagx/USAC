@@ -31,6 +31,7 @@ public class Main{
            //Iniciamos el juego:
            case 1 -> {
               position = 1;
+              juego.reiniciarJuego();
               juego.JuegoPrincipal();
            }
 

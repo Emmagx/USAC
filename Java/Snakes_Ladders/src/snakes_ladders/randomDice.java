@@ -2,10 +2,12 @@
 package snakes_ladders;
 
 public class randomDice {
+    private int[] posicionesTrampas;
     static int dado;
     static int cosenoCase;
     static int matrizCase;
     static int trampa;
+    static private boolean posicionesGeneradas = false;
     public int ranDice(){
         dado = 0;
         while (dado <2 || dado > 6){
@@ -45,31 +47,34 @@ public class randomDice {
 //        System.out.println("Numero " + matrizCase);
         return matrizCase;
 }
-        public int trampasEz(){
-        trampa = 0;
-        while (trampa <= 1 || trampa > 23){
-            double trampaPos = Math.random() * 22;
-            trampa = (int) trampaPos;
+        public int [] trampasEz(boolean condicion) {
+        if (condicion) {
+            posicionesTrampas = new int[9]; // Establecer 9 posiciones para las trampas, por ejemplo
+            for (int i = 0; i < posicionesTrampas.length; i++) {
+                posicionesTrampas[i] = (int) (Math.random() * 22) + 2; // Generar posiciones aleatorias entre 2 y 24
+            }posicionesGeneradas = true;
         }
-//        System.out.println("Numero " + trampa);
-        return trampa;}
+        return posicionesTrampas;
+    }
         
-        public int trampasMid(){
-        trampa = 0;
-        while (trampa < 24 || trampa > 48){
-            double trampaPos = Math.random() * 47;
-            trampa = (int) trampaPos;
-        }
-//        System.out.println("Numero " + trampa);
-        return trampa;}
+        public int [] trampasMid(){
+        int[] trampas = new int[4]; // Crear un arreglo para almacenar las trampas, asumiendo un máximo de 4 trampas
+            int Ntrampas = (int) (Math.random() * 3) + 2; // Generar un número aleatorio entre 2 y 4 para el número de trampas
+
+            for (int i = 0; i < Ntrampas; i++) {
+                trampas[i] = (int) (Math.random() * 7); // Generar números aleatorios para las posiciones de las trampas
+            }
+
+            return trampas;}
                 
-        public int trampasHard(){
-        trampa = 0;
-        while (trampa < 49 || trampa > 54){
-            double trampaPos = Math.random() * 23;
-            trampa = (int) trampaPos;
-        }
-//        System.out.println("Numero " + trampa);
-        return trampa;}
+        public int [] trampasHard(){
+        int[] trampas = new int[4]; // Crear un arreglo para almacenar las trampas, asumiendo un máximo de 4 trampas
+            int Ntrampas = (int) (Math.random() * 3) + 2; // Generar un número aleatorio entre 2 y 4 para el número de trampas
+
+            for (int i = 0; i < Ntrampas; i++) {
+                trampas[i] = (int) (Math.random() * 24); // Generar números aleatorios para las posiciones de las trampas
+            }
+
+            return trampas;}
         
 }

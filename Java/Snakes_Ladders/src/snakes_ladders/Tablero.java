@@ -2,66 +2,57 @@ package snakes_ladders;
 import java.util.Scanner;
 
 public class Tablero {
+    
     static Scanner scanner = new Scanner(System.in);
     String[][] tablero = new String[8][8];
-    static int  NewGame;
-    static int position;
+    randomDice random = new randomDice();
     static int contador;
     static Juego juego = new Juego();
 //    static int position;
+    private int [] trampas;
     Main Main = new Main();
- public void tablerito(String player, int position) {
-            contador = 1; // Inicializamos el contador en 1
-        // Recorremos las filas del tablero de abajo hacia arriba
-        for (int i = tablero.length - 1; i >= 0; i--) {
+ public void tablerito(String player, int position, int [] trampas) {
+    
+    contador = 1; // Inicializamos el contador en 1
+    
+    for (int i = tablero.length - 1; i >= 0; i--) {
+        for (int j = (i % 2 == tablero.length % 2) ? 0 : tablero[i].length - 1; 
+             (i % 2 == tablero.length % 2) ? j < tablero[i].length : j >= 0; 
+             j += (i % 2 == tablero.length % 2) ? 1 : -1) {
 
-            // Alternamos el sentido de conteo de los números en las filas pares e impares
-            if (i % 2 == tablero.length % 2) { // Filas pares
-                // Recorremos las columnas del tablero de derecha a izquierda
-                for (int j = 0; j < tablero[i].length; j++) {
-                    // Asignamos el número actual al tablero y aumentamos el contador
-                    tablero[i][j] = " [ " + contador  + " ] " ;                  
-                if (contador==position && position < 65){
-                    tablero[i][j] = " [ " + contador + " " + player + " ] " ;
-                }
-                contador++;
-                }  
-                
-            } else { // Filas impares
-                // Recorremos las columnas del tablero de izquierda a derecha
-                for (int j = tablero[i].length - 1; j >= 0; j--) {                   
-                    // Asignamos el número actual al tablero y aumentamos el contador
-                    tablero[i][j] = " [ " + contador  + " ] " ; 
-                    if (contador==position && position < 65){
-                        tablero[i][j] = " [ " + contador + " " + player + " ] " ;
-                }
-                    contador++;
+            // Inicializamos la celda con el número de la casilla
+            String celda = " [ " + contador + " ";
+            // Verificamos si el jugador está en esta casilla
+            if (contador == position && position < 65) {
+                // Concatenamos el símbolo del jugador a la celda
+                celda += player + " ";
+            }
+            
+
+            // Verificamos si la posición actual corresponde a una trampa
+            for (int trampa : trampas) {
+                if (contador == trampa) {
+                    // Concatenamos el símbolo "#" a la celda
+                    celda += " # ";
+                    break; // Salimos del bucle si encontramos una trampa
                 }
             }
-            while (position >= 64){
-                System.out.println("Felicidades haz terminado el juego");
-                System.out.println("Opciones 1. Volver al Inicio 2. Terminar programa");
-                int juego1 = scanner.nextInt();
-                position = 1;
-                if (juego1 == 1){
-                    juego.reiniciarJuego();
-                        
-                    position = 1; 
-                    Main.main(null);
-                    
-                }
-                if (juego1 == 2){
-                    System.out.println("Gracias por jugar");
-                    System.exit(0);
-                }
-            }
+             celda += " ] ";
+
+            // Asignamos la celda al tablero
+            tablero[i][j] = celda;
+
+            contador++;
         }
-        // Imprimimos el tablero
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero[i].length; j++) {
-                System.out.print(tablero[i][j]); // Imprimimos cada celda del tablero
-            }
-            System.out.println(); // Imprimimos una nueva línea al final de cada fila
+    }
+
+    // Imprimimos el tablero
+    for (int i = 0; i < tablero.length; i++) {
+        for (int j = 0; j < tablero[i].length; j++) {
+            System.out.print(tablero[i][j]); // Imprimimos cada celda del tablero
         }
- }
+        System.out.println(); // Imprimimos una nueva línea al final de cada fila
+    }
+}
+
 }
