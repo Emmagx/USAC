@@ -82,7 +82,7 @@ public class Matrices {
     static int [][] matrizImpresaSuma;
     static double [][] matrizImpresaDiv;
     static double [][] matrizDivision;
-    static float [][] matrizInversa;
+//    static float [][] matrizInversa;
     public int [][] sumaMatriz(int [][] a,int [][] b){
         for (int i=0; i<a.length; i++){
             for (int j = 0; j<a.length; j++){

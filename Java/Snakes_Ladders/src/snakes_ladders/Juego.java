@@ -8,7 +8,6 @@ public class Juego {
     static randomDice dice = new randomDice();
     static int dado;
     static int action = 0;
-    static int game;
     static Menu menu = new Menu();
     
     static Scanner scanner = new Scanner(System.in);
@@ -48,8 +47,11 @@ public class Juego {
                             trampasHard = dice.trampasEz(true);
                             trampasMid = dice.trampasMid(true);
                             juego.reiniciarJuego();
-                            Main.main(null);
-                            
+                            Main.main(null);  
+                        }
+                        if (opcion == 2){
+                            System.out.println("Saliendo del programa");
+                            System.exit(0);
                         }
 
             }

@@ -7,9 +7,9 @@ public class randomDice {
     private int[] posicionesTrampasHard;
     static int dado;
     static int pos;
-    static int cosenoCase;
-    static int matrizCase;
-    static int trampa;
+    static int cosenoCase = 0;
+    static int matrizCase = 0;
+
     static private boolean posicionesGeneradasEz = false;
     static private boolean posicionesGeneradasMid = false;
     static private boolean posicionesGeneradasHard = false;
@@ -25,19 +25,19 @@ public class randomDice {
     }
     
     public int RanCoseno(){
-        cosenoCase = 0;
-        while (cosenoCase <0 || dado > 2){
-            double coseno = Math.random() * 2;
+        cosenoCase =0;
+        if (cosenoCase == 0){
+            double coseno = Math.random() * 3;
             cosenoCase = (int) coseno;
         }
 //        System.out.println("Numero " + cosenoCase);
         return cosenoCase;
 }
         public int ranSumaMatriz(){
-        matrizCase = 0;
-        while (matrizCase < 0 || matrizCase > 2){
-            double matriz1 = Math.random() * 2;
-            matrizCase = (int) matriz1;
+            matrizCase = 0;
+        if (matrizCase == 0){
+            double matriz = Math.random() * 4;
+            matrizCase = (int) matriz;
         }
 //        System.out.println("Numero " + matrizCase);
         return matrizCase;
@@ -45,18 +45,18 @@ public class randomDice {
         
         public int ranDivMatriz(){
         matrizCase = 0;
-        while (matrizCase <= 0 || matrizCase > 2){
-            double matriz1 = Math.random() * 2;
-            matrizCase = (int) matriz1;
+        if (matrizCase == 0){
+            double matriz = Math.random() * 4;
+            matrizCase = (int) matriz;
         }
 //        System.out.println("Numero " + matrizCase);
         return matrizCase;
 }
         public int [] trampasEz(boolean condicion) {
         if (condicion) {
-            posicionesTrampasEz = new int[9];
+            posicionesTrampasEz = new int[10];
             for (int i = 0; i < posicionesTrampasEz.length; i++) {
-                posicionesTrampasEz[i] = (int) (Math.random() * 22) + 2;
+                posicionesTrampasEz[i] = (int) (Math.random() * 22) + 4;
             }posicionesGeneradasEz = true;
         }
         return posicionesTrampasEz;

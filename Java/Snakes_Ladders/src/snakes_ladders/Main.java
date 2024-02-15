@@ -7,10 +7,10 @@ package snakes_ladders;
 //This is for tests.
 //public class Main {
 //    static int opcion;
-//    static Matrices matrices = new Matrices();
+//    static ProblemaCosenos cos = new ProblemaCosenos();
 //    static int [][] matriz1 = new int [5][5];
 //    public static void main(String[] args) {
-//        matrices.resultadoDivision(matrices.matriz1Div(), matrices.matriz2Div());
+//        cos.case2Coseno();
 //     }  
 //    }   
 
