@@ -17,14 +17,13 @@ public class Tablero {
  public void tablerito(String player, int position, int [] trampasEz, int [] trampasMid, int [] trampasHard) {
     
     contador = 1; // Inicializamos el contador en 1
-    
     for (int i = tablero.length - 1; i >= 0; i--) {
+        
         for (int j = (i % 2 == tablero.length % 2) ? 0 : tablero[i].length - 1; 
              (i % 2 == tablero.length % 2) ? j < tablero[i].length : j >= 0; 
              j += (i % 2 == tablero.length % 2) ? 1 : -1) {
-
             // Inicializamos la celda con el número de la casilla
-            String celda = " [ " + contador + " ";
+            String celda = "[ " + contador + " ";
             // Verificamos si el jugador está en esta casilla
             if (contador == position && position < 65) {
                 // Concatenamos el símbolo del jugador a la celda
@@ -36,53 +35,66 @@ public class Tablero {
             for (int trampaEz : trampasEz) {
                 if (contador == trampaEz) {
                     // Concatenamos el símbolo "#" a la celda
-                    celda += " # ";
+                    celda += "#";
                     break; // Salimos del bucle si encontramos una trampa
                 }
             }
             for (int trampaMid : trampasMid) {
                 if (contador == trampaMid) {
                     // Concatenamos el símbolo "#" a la celda
-                    celda += " # ";
+                    celda += "#";
                     break; // Salimos del bucle si encontramos una trampa
                 }
             }
             for (int trampaHard : trampasHard) {
                 if (contador == trampaHard) {
                     // Concatenamos el símbolo "#" a la celda
-                    celda += " # ";
+                    celda += "#";
                     break; // Salimos del bucle si encontramos una trampa
                 }
             }
             //trampas
-            if (celda.contains("#") && (contador) == position && contador < 24){
+            if (celda.contains("#") && (contador) == position && contador < 24 && problemasEz <= 2){
                 boolean condicion = traps.trampasEz();
                     if (condicion == true){
                         problemasEz++;
+                        if (problemasEz >= 2){
+                            System.out.println("Ya no te apareceran mas problemas faciles");
+                            System.out.println("");
+                        }
                     }
                     else{
                         errores++;
                     }
                             }
-            if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24){
+            if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid <= 2){
                 boolean condicion = traps.trampasMid();
                     if (condicion == true){
                         problemasMid++;
+                            if (problemasMid >= 2){
+                            System.out.println("Ya no te apareceran mas problemas Medios");
+                            System.out.println("");
+                        }
                             }
                             else{
                                 errores++;
                             }}
-            if (celda.contains("#") && (contador) == position && contador > 48){
+            if (celda.contains("#") && (contador) == position && contador > 48 && problemasHard < 3){
                 boolean condicion = traps.trampasHard();
                     if (condicion == true){
                         problemasHard++;
+                        if (problemasHard >= 2){
+                            System.out.println("Ya no te apareceran mas problemas dificiles");
+                            System.out.println("");
+                        }
                         }
                         else{
                             errores++;
                         }
                         }        
                     
-             celda += " ] ";
+             celda += " ]";
+
              if(errores >= 2){
                  System.out.println("Has cometido 2 errores");
                  System.out.println("Game Over");
@@ -115,5 +127,6 @@ public class Tablero {
             System.out.println(); // Imprimimos una nueva línea al final de cada fila
         }
 }
+
 }
 

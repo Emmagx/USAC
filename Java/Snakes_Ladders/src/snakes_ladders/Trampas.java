@@ -1,5 +1,5 @@
 package snakes_ladders;
-import java.util.*;
+import java.util.Scanner;
 
 public class Trampas {
     Scanner scanner = new Scanner(System.in);
@@ -8,7 +8,7 @@ public class Trampas {
     ProblemaCosenos cos = new ProblemaCosenos();
     double [][] matrizResultante = new double [4][4];
     double [] cosenoResultante = new double[3];;
-    double [][] matrizResultanteSuma = new double [5][5];
+    int [][] matrizResultanteSuma = new int [5][5];
     
     boolean rightAnswer;
     boolean respuestaCorrecta;
@@ -32,7 +32,7 @@ public class Trampas {
                 cosenoResultante[1] = scanner.nextFloat();
                 System.out.println("Angulo gamma ");
                 cosenoResultante[2] = scanner.nextFloat();
-                if (Arrays.equals(cosenoResultante, cos.case1Coseno())){
+                if (igualdadCos(cosenoResultante, cos.case1Coseno())){
                 System.out.println("Respuesta correcta");
                 System.out.println("_________________________________________");
                     respuestaCorrecta = true;
@@ -61,7 +61,7 @@ public class Trampas {
                 cosenoResultante[1] = scanner.nextFloat();
                 System.out.println("Angulo gamma");
                 cosenoResultante[2] = scanner.nextFloat();
-                if (Arrays.equals(cosenoResultante, cos.case2Coseno())){
+                if (igualdadCos(cosenoResultante, cos.case2Coseno())){
                 System.out.println("Respuesta correcta");
                     System.out.println("_________________________________________");
                     respuestaCorrecta = true;
@@ -89,7 +89,7 @@ public class Trampas {
                 cosenoResultante[1] = scanner.nextFloat();
                 System.out.println("Angulo betta");
                 cosenoResultante[2] = scanner.nextFloat();
-                if (Arrays.equals(cosenoResultante, cos.case3Coseno())){
+                if (igualdadCos(cosenoResultante, cos.case3Coseno())){
                 System.out.println("Respuesta correcta");
                     System.out.println("_________________________________________");
                     respuestaCorrecta = true;
@@ -120,7 +120,7 @@ public class Trampas {
                         matrizResultanteSuma[i][j] = scanner.nextInt();
             }
     }
-                if (Arrays.equals(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz1Suma(), matrices.matriz2Suma()))){
+                if (igualdadSuma(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz1Suma(), matrices.matriz2Suma()))){
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
@@ -138,10 +138,10 @@ public class Trampas {
                 for (int i=0; i<matrizResultanteSuma.length; i++){
                      for (int j = 0; j<matrizResultanteSuma.length; j++){
                             System.out.println("Colocar el valor de la casilla " + i +  "," + j);
-                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                            matrizResultanteSuma[i][j] = scanner.nextInt();
                 }
     }
-                if (Arrays.equals(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz3Suma(), matrices.matriz4Suma()))){
+                if (igualdadSuma(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz3Suma(), matrices.matriz4Suma()))){
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
@@ -159,10 +159,10 @@ public class Trampas {
                 for (int i=0; i<matrizResultanteSuma.length; i++){
                      for (int j = 0; j<matrizResultanteSuma.length; j++){
                             System.out.println("Colocar el valor de la casilla " + i +  "," + j);
-                            matrizResultanteSuma[i][j] = scanner.nextDouble();
+                            matrizResultanteSuma[i][j] = scanner.nextInt();
                 }
             }
-                if (Arrays.equals(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz5Suma(), matrices.matriz6Suma()))){
+                if (igualdadSuma(matrizResultanteSuma, matrices.resultadosSuma(matrices.matriz5Suma(), matrices.matriz6Suma()))){
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
@@ -193,7 +193,7 @@ public class Trampas {
                             matrizResultante[i][j] = scanner.nextDouble();
                 }
         }
-                if (Arrays.equals(matrizResultante, matrices.resultadoDivision(matrices.matriz1Div(), matrices.matriz2Div()))){
+                if (igualdad(matrizResultante, matrices.resultadoDivision(matrices.matriz1Div(), matrices.matriz2Div()))){
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
@@ -213,7 +213,7 @@ public class Trampas {
                             matrizResultante[i][j] = scanner.nextDouble();
                     }
             }
-                if (Arrays.equals(matrizResultanteSuma, matrices.resultadoDivision(matrices.matriz3Div(), matrices.matriz4Div()))){
+                if (igualdad(matrizResultante, matrices.resultadoDivision(matrices.matriz3Div(), matrices.matriz4Div()))){
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
@@ -230,4 +230,35 @@ public class Trampas {
         }
         return rightAnswer;      
     }
+    
+public boolean igualdad(double[][] a, double[][] b) {
+    for (int i = 0; i < a.length; i++) {
+        for (int j = 0; j < a[i].length; j++) {
+            if (a[i][j] != b[i][j]) {
+                return false; // Se encontró al menos un elemento diferente
+            }
+        }
+    }
+
+    return true; // Las matrices son iguales
+}
+public boolean igualdadSuma(int [][] a, int [][] b){
+    for (int i = 0; i < a.length; i++) {
+        for (int j = 0; j < a[i].length; j++) {
+            if (a[i][j] != b[i][j]) {
+                return false; // Se encontró al menos un elemento diferente
+            }
+        }
+    }
+    return true;
+}
+
+public boolean igualdadCos(double [] a, double [] b){
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != b[i]) {
+                return false; 
+        }
+    }
+        return true;
+}
 }

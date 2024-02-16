@@ -64,9 +64,9 @@ public class randomDice {
         
         public int [] trampasMid(boolean condicion){
         if (condicion) {
-            posicionesTrampasMid = new int[10];
+            posicionesTrampasMid = new int[15];
             for (int i = 0; i < posicionesTrampasMid.length; i++) {
-                pos = (int) (Math.random() * 46) + 2;
+                pos = (int) (Math.random() * 24) + 23;
                 if (pos > 24 && pos < 49){posicionesTrampasMid[i] = pos;}
                 
             }posicionesGeneradasMid = true;
@@ -78,7 +78,7 @@ public class randomDice {
         if (condicion) {
             posicionesTrampasHard = new int[10];
             for (int i = 0; i < posicionesTrampasHard.length; i++) {
-                pos = (int) (Math.random() * 61) + 2;
+                pos = (int) (Math.random() * 16 ) + 48;
                 if(pos > 48 && pos < 63){
                 posicionesTrampasHard[i] = pos;
             }posicionesGeneradasHard = true;

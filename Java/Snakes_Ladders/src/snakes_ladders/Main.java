@@ -2,7 +2,7 @@ package snakes_ladders;
 
 /**
  *
- * @author Emmag
+ * @author Emmagx
  */
 //This is for tests.
 //public class Main {
@@ -18,7 +18,6 @@ package snakes_ladders;
 public class Main{
     static int opcion;
     static Juego juego = new Juego();
-    static Tablero tablero = new Tablero();
     static Menu menu = new Menu();
     static int position;
     public static void main(String[] args) {

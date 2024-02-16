@@ -1,5 +1,4 @@
 package snakes_ladders;
-import java.text.DecimalFormat;
 
 /**
  *
@@ -7,7 +6,7 @@ import java.text.DecimalFormat;
  */
 
 public class Matrices {
-    DecimalFormat df = new DecimalFormat("#.###");
+    
     static Matrices matrices = new Matrices();
 //Declare all the arrays to use
     static double [][] matriz1Div(){ double [][] matriz1Div = {{5, 10, 1, 3},
@@ -130,7 +129,7 @@ public class Matrices {
             for(int j = 0; j < 4; j++){
                 matrizDivision[i][j] = 0;
                 for (int k = 0; k<4; k++){
-                matrizDivision[i][j] += a[i][k] * c[k][j];
+                matrizDivision[i][j] += Math.round((a[i][k] * c[k][j])*1000 )/1000;
                 
             }
             } 
@@ -143,7 +142,7 @@ public class Matrices {
         for (int i=0; i <a.length; i++){
             for (int j = 0; j<a[i].length; j++){
                 matrizDivision = matrices.divisionMatriz(a, b);
-                System.out.print(" [ " + df.format(matrizDivision[i][j]) + " ] ");
+                System.out.print(" [ " + (matrizDivision[i][j]) + " ] ");
                 }
             System.out.println("");
             }

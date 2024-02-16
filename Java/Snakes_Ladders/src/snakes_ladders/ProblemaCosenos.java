@@ -23,10 +23,10 @@ public class ProblemaCosenos {
             rightAnswer[1] = Math.round(Math.toDegrees(beta)*1000)/1000;
             rightAnswer[2] = Math.round((Math.toDegrees(gama) * 1000) / 1000);
             
-            System.out.println("Respuestas correctas caso 1");
-            for (int i = 0; i < 3; i++){
-                System.out.println(i + "  " + rightAnswer[i]);
-            }
+//            System.out.println("Respuestas correctas caso 1");
+//            for (int i = 0; i < 3; i++){
+//                System.out.println(i + "  " + rightAnswer[i]);
+//            }
                 return rightAnswer;
     }
         public double[] case2Coseno(){
@@ -42,11 +42,11 @@ public class ProblemaCosenos {
             rightAnswer[0] = Math.round(ladoA);
             rightAnswer[1] = Math.round(Math.toDegrees(alpha)*1000)/1000;
             rightAnswer[2] = Math.round(Math.toDegrees(gama)*1000)/1000;
-            System.out.println("Respuestas correctas caso 2");
-            for (int i = 0; i < 3; i++){
-                System.out.println(i + "  " + rightAnswer[i]);
-            }
-            
+//            System.out.println("Respuestas correctas caso 2");
+//            for (int i = 0; i < 3; i++){
+//                System.out.println(i + "  " + rightAnswer[i]);
+//            }
+//            
             return rightAnswer;        
     }
         public double [] case3Coseno(){
@@ -63,9 +63,9 @@ public class ProblemaCosenos {
             rightAnswer[1] = Math.round(Math.toDegrees(alpha)*1000)/1000;
             rightAnswer[2] = Math.round(Math.toDegrees(beta)*1000)/1000;
             System.out.println("Respuestas correctas caso 3");
-            for (int i = 0; i < 3; i++){
-                System.out.println(i + "  " + rightAnswer[i]);
-            }
+//            for (int i = 0; i < 3; i++){
+//                System.out.println(i + "  " + rightAnswer[i]);
+//            }
             return rightAnswer;
     }
     public int resultadosCosenos(){
