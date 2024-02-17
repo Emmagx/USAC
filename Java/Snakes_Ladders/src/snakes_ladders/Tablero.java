@@ -54,7 +54,7 @@ public class Tablero {
                 }
             }
             //trampas
-            if (celda.contains("#") && (contador) == position && contador < 24 && problemasEz <= 2){
+            if (celda.contains("#") && (contador) == position && contador < 24 && problemasEz < 2){
                 boolean condicion = traps.trampasEz();
                     if (condicion == true){
                         problemasEz++;
@@ -67,7 +67,7 @@ public class Tablero {
                         errores++;
                     }
                             }
-            if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid <= 2){
+            if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid < 2){
                 boolean condicion = traps.trampasMid();
                     if (condicion == true){
                         problemasMid++;
@@ -76,10 +76,10 @@ public class Tablero {
                             System.out.println("");
                         }
                             }
-                            else{
-                                errores++;
-                            }}
-            if (celda.contains("#") && (contador) == position && contador > 48 && problemasHard < 3){
+                    if (condicion==false){
+                        errores++;
+                        }}
+            if (celda.contains("#") && (contador) == position && contador > 48 && problemasHard < 2){
                 boolean condicion = traps.trampasHard();
                     if (condicion == true){
                         problemasHard++;
@@ -88,8 +88,8 @@ public class Tablero {
                             System.out.println("");
                         }
                         }
-                        else{
-                            errores++;
+                    if (condicion==false){
+                        errores++;
                         }
                         }        
                     

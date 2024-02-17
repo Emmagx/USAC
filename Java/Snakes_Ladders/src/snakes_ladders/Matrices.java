@@ -114,10 +114,10 @@ public class Matrices {
         for (int i=0; i <a.length; i++){
             for (int j = 0; j<a[i].length; j++){
                 matriz1 = matrices.sumaMatriz(a, b);
-                System.out.print(" [ " + matriz1[i][j]+ " ] ");
-                }
-            System.out.println("");
-            }
+            //     System.out.print(" [ " + matriz1[i][j]+ " ] ");
+            //     }
+            // System.out.println("");
+            }}
         return matriz1;
         }
     
@@ -146,6 +146,7 @@ public class Matrices {
                 }
             System.out.println("");
             }
+        // }
         return matrizDivision;
     }
     public double [][] imprimirMatrizDivision(double [][]a, double b[][]){

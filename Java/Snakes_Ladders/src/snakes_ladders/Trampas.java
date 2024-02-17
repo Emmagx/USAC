@@ -124,6 +124,7 @@ public class Trampas {
                     respuestaCorrecta = true;
                     System.out.println("La respuesta es correcta");
                     System.out.println("_________________________________________");
+
                 }
                 else{
                     System.out.println("Respueta Incorrecta");
@@ -177,7 +178,7 @@ public class Trampas {
                 System.out.println("Error");
                     }
         }
-        return rightAnswer;
+        return respuestaCorrecta;
     }
     public boolean trampasHard(){
         System.out.println("Resolver las siguientes divisiones de matrices (REDONDEAR RESULTADO A 3 DECIMLAES Y COLOCAR EL SIGNO)");
@@ -228,7 +229,7 @@ public class Trampas {
                 System.out.println("Error");
             }
         }
-        return rightAnswer;      
+        return respuestaCorrecta;      
     }
     
 public boolean igualdad(double[][] a, double[][] b) {

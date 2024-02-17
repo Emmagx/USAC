@@ -62,7 +62,7 @@ public class ProblemaCosenos {
             rightAnswer[0] = Math.round(ladoC *1000)/1000;
             rightAnswer[1] = Math.round(Math.toDegrees(alpha)*1000)/1000;
             rightAnswer[2] = Math.round(Math.toDegrees(beta)*1000)/1000;
-            System.out.println("Respuestas correctas caso 3");
+//            System.out.println("Respuestas correctas caso 3");
 //            for (int i = 0; i < 3; i++){
 //                System.out.println(i + "  " + rightAnswer[i]);
 //            }

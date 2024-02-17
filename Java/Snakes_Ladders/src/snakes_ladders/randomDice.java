@@ -36,7 +36,7 @@ public class randomDice {
         public int ranSumaMatriz(){
             matrizCase = 0;
         if (matrizCase == 0){
-            double matriz = Math.random() * 4;
+            double matriz = Math.random() * 3;
             matrizCase = (int) matriz;
         }
 //        System.out.println("Numero " + matrizCase);
@@ -46,7 +46,7 @@ public class randomDice {
         public int ranDivMatriz(){
         matrizCase = 0;
         if (matrizCase == 0){
-            double matriz = Math.random() * 4;
+            double matriz = Math.random() * 2;
             matrizCase = (int) matriz;
         }
 //        System.out.println("Numero " + matrizCase);
