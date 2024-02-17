@@ -53,32 +53,32 @@ public class Tablero {
                     break; // Salimos del bucle si encontramos una trampa
                 }
             }
-            // //trampas
-            // if (celda.contains("#") && (contador) == position && contador < 24 && problemasEz < 2){
-            //     boolean condicion = traps.trampasEz();
-            //         if (condicion == true){
-            //             problemasEz++;
-            //             if (problemasEz >= 2){
-            //                 System.out.println("Ya no te apareceran mas problemas faciles");
-            //                 System.out.println("");
-            //             }
-            //         }
-            //         else{
-            //             errores++;
-            //         }
-            //                 }
-            // if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid < 2){
-            //     boolean condicion = traps.trampasMid();
-            //         if (condicion == true){
-            //             problemasMid++;
-            //                 if (problemasMid >= 2){
-            //                 System.out.println("Ya no te apareceran mas problemas Medios");
-            //                 System.out.println("");
-            //             }
-            //                 }
-            //         if (condicion==false){
-            //             errores++;
-            //             }}
+            //trampas
+            if (celda.contains("#") && (contador) == position && contador < 24 && problemasEz < 2){
+                boolean condicion = traps.trampasEz();
+                    if (condicion == true){
+                        problemasEz++;
+                        if (problemasEz >= 2){
+                            System.out.println("Ya no te apareceran mas problemas faciles");
+                            System.out.println("");
+                        }
+                    }
+                    else{
+                        errores++;
+                    }
+                            }
+            if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid < 2){
+                boolean condicion = traps.trampasMid();
+                    if (condicion == true){
+                        problemasMid++;
+                            if (problemasMid >= 2){
+                            System.out.println("Ya no te apareceran mas problemas Medios");
+                            System.out.println("");
+                        }
+                            }
+                    if (condicion==false){
+                        errores++;
+                        }}
             if (celda.contains("#") && (contador) == position && contador > 48 && problemasHard < 2){
                 boolean condicion = traps.trampasHard();
                     if (condicion == true){
