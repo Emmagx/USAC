@@ -5,15 +5,6 @@ package snakes_ladders;
  * @author Emmagx
  */
 //This is for tests.
-//public class Main {
-//    static int opcion;
-//    static ProblemaCosenos cos = new ProblemaCosenos();
-//    static int [][] matriz1 = new int [5][5];
-//    public static void main(String[] args) {
-//        cos.case2Coseno();
-//     }  
-//    }   
-
 //////Principal code
 public class Main{
     static int opcion;

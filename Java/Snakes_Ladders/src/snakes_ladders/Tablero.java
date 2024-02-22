@@ -15,10 +15,10 @@ public class Tablero {
     Main Main = new Main();
     static Trampas traps = new Trampas();
  public void tablerito(String player, int position, int [] trampasEz, int [] trampasMid, int [] trampasHard) {
-    
+    System.out.println("Solo puedes cometer 2 errores, llevas " + errores);
     contador = 1; // Inicializamos el contador en 1
     for (int i = tablero.length - 1; i >= 0; i--) {
-        
+       
         for (int j = (i % 2 == tablero.length % 2) ? 0 : tablero[i].length - 1; 
              (i % 2 == tablero.length % 2) ? j < tablero[i].length : j >= 0; 
              j += (i % 2 == tablero.length % 2) ? 1 : -1) {
@@ -64,7 +64,7 @@ public class Tablero {
                         }
                     }
                     else{
-                        errores++;
+                        errores++; System.out.println("errores " + errores);
                     }
                             }
             if (celda.contains("#") && (contador) == position && contador < 48 && contador > 24 && problemasMid < 2){
@@ -77,7 +77,7 @@ public class Tablero {
                         }
                             }
                     if (condicion==false){
-                        errores++;
+                        errores++; System.out.println("errores " + errores);
                         }}
             if (celda.contains("#") && (contador) == position && contador > 48 && problemasHard < 2){
                 boolean condicion = traps.trampasHard();
@@ -89,7 +89,7 @@ public class Tablero {
                         }
                         }
                     if (condicion==false){
-                        errores++;
+                        errores++; System.out.println("errores " + errores);
                         }
                         }        
                     

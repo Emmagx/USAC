@@ -19,9 +19,9 @@ public class Trampas {
         switch (trampa){
             case 0 -> {
                 System.out.println("Caso 1");
-                int ladoA = 15; 
-                int ladoC = 20; 
-                int alpha = 25;
+                int ladoA = 14; 
+                int ladoC = 11; 
+                int alpha = 34;
                 System.out.println("Lado A " + ladoA);
                 System.out.println("Lado C " + ladoC);
                 System.out.println("Angulo aplha " + alpha);
@@ -49,9 +49,9 @@ public class Trampas {
             }
             case 1 ->{
                 System.out.println("Caso 2");
-                int ladoB = 10; 
-                int ladoC = 25; 
-                int beta = 30;
+                int ladoB = 15; 
+                int ladoC = 30;; 
+                int beta = 35;
                 System.out.println("Lado B " + ladoB);
                 System.out.println("Lado C " + ladoC);
                 System.out.println("Angulo beta " + beta);
@@ -76,9 +76,9 @@ public class Trampas {
             }
             case 2 -> {
                 System.out.println("Caso 3");
-                int ladoA = 18; 
-                int ladoB = 25; 
-                int gama = 30;
+                int ladoA = 13; 
+                int ladoB = 20; 
+                int gama = 25;
                 System.out.println("Lado A " + ladoA);
                 System.out.println("Lado B " + ladoB);
                 System.out.println("Angulo gamma " + gama);
@@ -112,6 +112,7 @@ public class Trampas {
         System.out.println("Resolver la siguiente Suma de Matrices");
         switch (trampa){
             case 0 -> {
+                System.out.println("caso 1");
                 matrices.imprimirMatrizSuma(matrices.matriz1Suma(), matrices.matriz2Suma());
                 System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
                 for (int i=0; i<matrizResultanteSuma.length; i++){
@@ -134,6 +135,7 @@ public class Trampas {
 
             }
             case 1 -> {
+                System.out.println("caso 2");
                 matrices.imprimirMatrizSuma(matrices.matriz3Suma(), matrices.matriz4Suma()); 
                 System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
                 for (int i=0; i<matrizResultanteSuma.length; i++){
@@ -155,6 +157,7 @@ public class Trampas {
             }
             
             case 2 -> {
+                System.out.println("caso 3");
                 matrices.imprimirMatrizSuma(matrices.matriz5Suma(), matrices.matriz6Suma());
                 System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
                 for (int i=0; i<matrizResultanteSuma.length; i++){
@@ -185,6 +188,7 @@ public class Trampas {
         int trampa = random.ranDivMatriz();
         switch(trampa){
             case 0 -> {
+                System.out.println("caso 1");
                 matrices.imprimirMatrizDivision(matrices.matriz1Div(), matrices.matriz2Div());
                 
                 System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
@@ -206,6 +210,7 @@ public class Trampas {
                 }                
             }
             case 1 -> {
+                System.out.println("caso 2");
                 matrices.imprimirMatrizDivision(matrices.matriz3Div(), matrices.matriz4Div()); 
                 System.out.println("Ingrese los datos de la matriz en el orden solicitado:");
                 for (int i=0; i<matrizResultante.length; i++){

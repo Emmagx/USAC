@@ -1,5 +1,4 @@
 package snakes_ladders;
-
 import java.util.Scanner;
 
 public class Juego {
