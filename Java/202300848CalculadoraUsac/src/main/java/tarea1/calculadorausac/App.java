@@ -7,7 +7,8 @@ public class App {
         double num1 = 0;
         double num2 = 0;
         boolean condicion = true;
-        static Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        
         while(condicion == true){
             System.out.println("--------------------------------");
             System.out.println("Que operacion desea realizar?\n");
