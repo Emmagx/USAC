@@ -122,7 +122,7 @@ public class Tablero {
         // Imprimimos el tablero
         for (String[] tablero1 : tablero) {
         for (String tablero11 : tablero1) {
-            System.out.print(tablero11); // Imprimimos cada celda del tablero
+            System.out.print(tablero1); // Imprimimos cada celda del tablero
         }
             System.out.println(); // Imprimimos una nueva línea al final de cada fila
         }
