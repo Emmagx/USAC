@@ -8,7 +8,7 @@ class ParImparGame(QWidget):
         self.init_ui()
     
     def init_ui(self):
-        self.setWindowTitle("Juego Cyberpunk")
+        self.setWindowTitle("Par-Impar-Game")
         self.setGeometry(100, 100, 300, 200)
 
         layout = QVBoxLayout()
