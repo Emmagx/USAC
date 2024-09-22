@@ -110,7 +110,7 @@ else:
 #Empieza de cero hasta -1 que es el ultimo objeto, para llamar desde el ultimo objeto, empezamos desde -1 y asi consecutivamente.
 lista=["Futbol", 234, 1.23, [16, "1"], True]   #Ejemplo de un array
 print(lista)                                   #Imprime la lista entera
-print(lista[4[2]])                             #Imprime un solo objeto de la lista, en este caso esta llamando a un objeto dentro de una lsita objeto
+#print(lista[4[2]])                             #Imprime un solo objeto de la lista, en este caso esta llamando a un objeto dentro de una lsita objeto
 print(lista[0:3])                              #Imprime una rango de la lista, el primer numero es el inciio, el segundo es hasta que NO
                                                #De objeto a ir, empezando desde el 1
 print(lista[:3])                               #Lo mismo que lo anterior, pero sin el 0, python interpreta como cero el dejar en blanco
@@ -123,8 +123,8 @@ lista.insert(0, "Va luego del indice 0")       #Podemos definir el orden en el q
 lista.extend([1, 2, 3])                        #Datos agregados por bloque, en este caso en van desde el ultimo indice
 
 lista2=(1, 2, 3, "Hola")
-lista3=lista+lista2                            #Concatenar dos listas o mas
-print(lista3)
+#lista3=lista+lista2                            #Concatenar dos listas o mas
+#print(lista3)
 print("Futbol" in lista)                       #Así se busca un dato en un array, con IN, minusculas, te dara un valor booleano
 print(lista.index("Futbol"))                   #Devuelve el indice del objeto buscado
 print(lista.count("Futbol"))                   #Cuenta cuantas veces se repite el mismo valor 
