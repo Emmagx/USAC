@@ -9,33 +9,32 @@ edades = [20, 20, 20, 24, 19, 20, 20, 20, 20, 21, 25, 20, 20, 21, 20, 18, 31, 20
           20, 20, 20, 22, 19, 25, 18, 21, 22, 21]
 
 # Convertimos la lista a una serie de pandas para facilitar los cálculos
-edades_serie = pd.Series(edades)
-
+edades = pd.Series(edades)
 # Calcular la tabla de frecuencias
-tabla_frecuencia = edades_serie.value_counts().sort_index()
+tabla_frecuencia = edades.value_counts().sort_index()
 
 # Medidas de tendencia central
-media = edades_serie.mean()
-mediana = edades_serie.median()
-moda = edades_serie.mode()[0]
+media = edades.mean()
+mediana = edades.median()
+moda = edades.mode()[0]
 
 # Medidas de dispersión
-varianza = edades_serie.var()
-desviacion_estandar = edades_serie.std()
-rango = edades_serie.max() - edades_serie.min()
-rango_intercuartilico = edades_serie.quantile(0.75) - edades_serie.quantile(0.25)
+varianza = edades.var()
+desviacion_estandar = edades.std()
+rango = edades.max() - edades.min()
+rango_intercuartilico = edades.quantile(0.75) - edades.quantile(0.25)
 
 # Medidas de forma (sesgo y curtosis)
-sesgo = edades_serie.skew()
-curtosis = edades_serie.kurtosis()
+sesgo = edades.skew()
+curtosis = edades.kurtosis()
 
 # Percentiles y deciles
-percentil_90 = edades_serie.quantile(0.90)
-decile_2 = edades_serie.quantile(0.2)
-decile_6 = edades_serie.quantile(0.6)
+percentil_90 = edades.quantile(0.90)
+decile_2 = edades.quantile(0.2)
+decile_6 = edades.quantile(0.6)
 
 # Resultados
-tabla_frecuencia, media, mediana, moda, varianza, desviacion_estandar, rango, rango_intercuartilico, sesgo, curtosis, percentil_90, decile_2, decile_6
+# tabla_frecuencia, media, mediana, moda, varianza, desviacion_estandar, rango, rango_intercuartilico, sesgo, curtosis, percentil_90, decile_2, decile_6
 print("Tabla de Frecuencia:")
 print(tabla_frecuencia)
 
