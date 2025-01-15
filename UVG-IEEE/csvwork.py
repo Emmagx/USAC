@@ -6,7 +6,7 @@ lista = [1, 2, 3,4, 'cadena', True, 2.12]
 diccionario = {"clave" : 12}
 empleados = [
     {"ID": 1, "Nombre": "Juan Perez", "Salario": 3000}, # clave valor
-    {"ID": 2, "Nombre": "Ana Gómez", "Salario": 3200},
+    {"ID": 2, "Nombre": "Ana Gomez", "Salario": 3200},
     {"ID": 3, "Nombre": "Carlos Sanchez", "Salario": 2800}
 ]
 
